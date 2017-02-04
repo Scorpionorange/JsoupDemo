@@ -23,7 +23,7 @@ public class JsoupDemoMain {
         Elements elements = document.select("#all-news");
 
         for (Element element : elements) {
-            Elements titleElement = element.select("a[href]");
+            Elements titleElement = element.select("a[href]").select("class");
             String title = titleElement.text();
             String link = titleElement.attr("href").trim();
 
